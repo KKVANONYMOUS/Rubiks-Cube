@@ -19,10 +19,13 @@
 - how to give array input obtained after running CubeInput.py file
 - How to run the file gcc command
 - explain the output - attach output example
-### Demo Input (Kunal)
-- Add 6 reference images
-- shuffle function
-- Add faceMatrix for direct input to CFOP.cpp
+### Demo Input
+The repo contains a [demo](https://github.com/KKVANONYMOUS/Rubiks-Cube/tree/master/demo) directory with [images](https://github.com/KKVANONYMOUS/Rubiks-Cube/tree/master/demo/images) folder for sample input for the `CubeInput.py` program which will generate the corresponding face matrix, to be given as input to `CFOP.cpp` program.
+Or else the user can directly give the face matrix present in [Sample_Input_For_CFOP.txt](https://github.com/KKVANONYMOUS/Rubiks-Cube/blob/master/demo/Sample_Input_For_CFOP.txt) file as input to `CFOP.cpp` file.
+<br><br>
+For more info regarding giving input to the program you can refer to [Giving Input](#giving-input-ayushi) section.
+#### Shuffle function
+This function gives additional option to shuffle the cube in order to test the code for different cases. Just give the cube rotation input in the form of numbers ranging from 0-11 as decribed in [Notations](#notations-kunal) and press 12 when you are done with the shuffiling.
 ## Team
 - Kunal Kumar Verma - [@kkvanonymous](https://github.com/KKVANONYMOUS)
 - Ayushi Gupta - [@Ayushi-Gupta7](https://github.com/Ayushi-Gupta7)
