@@ -1,8 +1,13 @@
 # Rubiks-Cube
-## Description (Kunal)
-- General info about rubiks cube
-- about world records, championship
-- various algos to solve available
+## Description
+The [Rubik’s Cube](https://en.wikipedia.org/wiki/Rubik%27s_Cube) is an infamous puzzle designed in 1974 by a Hungarian professor, known as Ernő Rubik. The puzzle consists of a large cube being split into a 3x3 orientation of smaller cubes, with each side being able to rotate 360 degrees. Each side is assigned a colour, and the cube is considered **`solved`** when each side is made up of just one colour.
+<br>
+Every time you rotate a side, it breaks the colours apart, scrambling the puzzle. Once the cube is fully scrambled the aim is to try and piece all the colours together until it is back in its solved form.<br><br>
+There are various methods to solve Rubik's Cube but here we will make use of `CFOP Algorithm` to solve the cube in a very optimized manner.
+<br><br>
+Sounds <i>interesting</i>,right?
+<br><br>
+Let's dig deep into the various aspects involved in solving the cube
 ## Theory
 - explain about how we take input- explain opencv code (Ayushi)
 - then algos invlolved to solve the cube (Chamma)
