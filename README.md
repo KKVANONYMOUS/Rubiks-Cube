@@ -10,8 +10,28 @@ Sounds <i>interesting</i>,right?
 Let's dig deep into the various aspects involved in solving the cube
 ## Theory
 - explain about how we take input- explain opencv code (Ayushi)
-- then algos invlolved to solve the cube (Chamma)
-- explain about CFOP Algo (Chamma)
+- ### Structures to Store the cube state
+   - **arr** is a 2D vector which consists of all 6 colours and its index represents its neighbours. i.e- in arr[i][j] i denotes the colour code and j (0->color         code , 1->color code of upper block , 2-> left block , 3-> right block,4->bottom block , 5->yellow block) represent the color code of its neighbors.
+
+   - **matrixes[6][9]** is a vector of struct faceMatrix consisting of two vectors v1 and v2 where v1 stores its current position of that block and v2 stores its        current position according to the centre.(i.e matrixes[1][1] looks for current position of 2 sided red-yellow block and v2 represent in which center red          color is faced).
+
+
+- ### Algorithms involved in solving the cube
+ - **Making White Cross** :- For making white cross we made a function `makeWhiteCross()`.There are 4!=24 (solving in any sequence of red , green , blue and            orange) ways to make white cross. We look for all the  possibilities. We first take a maximum of 30 steps and look for the minimum number of steps needed          and then apply it to make the white cross.
+    
+ - **F2L** :- After making white cross we make the first two layer (i.e- middle layer of red, green , blue and green and all four white corner pieces) using           the `implementF2L()` function based on the [F2L Algo](https://ruwix.com/the-rubiks-cube/advanced-cfop-fridrich/first-two-layers-f2l/).Here we have have           taken maximum steps as 100 and try all possibilities to reduce maximum steps by taking into account all the possible cases.
+  
+ - **Making Yellow Cross** :- First we check if the yellow cross is already made or not by using the `checkYellowCross()` function. If it's not, we call the           `createYellowCross()` function to make the  yellow cross by looking at all possible cases.
+
+ - **OLL** :- When the first two layers (F2L) are solved we need to orient the last layer (OLL) so the upper face of the Rubik's Cube is all yellow. We don't care      if the side colors   don't  match, we are going to permute the last layer (PLL) in the next step. The function `oll()` implements the above algo by first          counting the number of yellow corners in the current cube state and then applying the corresponding algo for orienting the layer.
+
+  - **PLL** :- In this final step we make use of the `setCorners` function to set the corners of the last layer and then call `setEdges` to finally set the edges.
+
+Hurray our cube is solved!
+
+
+
+
 ## Usage
 ### Notations
 Every rotation of the cube is represented by a unique `color code` lying between `0-11 (both inclusive)` which are mentioned below:
