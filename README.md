@@ -9,10 +9,10 @@ Sounds <i>interesting</i>,right?
 <br><br>
 Let's dig deep into the various aspects involved in solving the cube
 ## Theory
-- ### 
-   - When we pass the images of all the faces to `CubeInput.py`, it reads all the images one by one , stores the image data in the form of numpy array. To crop the unnecessary part of image, we have used `selectROI()` function. 
-   - The croped image is then resized and pass to `face_color()` function where the different color blocked are masked out using their hsv values and `inRange()` function of opencv. This function returns a black-white image of each block where the particular color is white and rest is all black.
-   - This image is passed to `mask()` function where we have find contours and then iterated over each contour and rejected small contours on the basis of area.We have initiliased a 2-d zero array in which we store the color states of each face.
+- ### (kunal)
+   - When we pass the images of all the faces to `CubeInput.py`, it reads all the images one by one and stores the image data in the form of numpy array. To crop the unnecessary part of image, we have used `selectROI()` function. 
+   - The croped image is then resized and pass to `face_color()` function where the different color blocks are masked out using their hsv values and `inRange()` function of opencv. This function returns a black-white image of each block where the particular color is white and rest is all black.
+   - This image is passed to `mask()` function where we have find contours and then iterated over each contour and rejected small contours on the basis of area.We have initiliased a 2-d zero array in which we store the color states of each face. Using some maths and using centres of each block ,we have filled the 2-d array.
    - The blocks are given color according to following manner:
         - red:1
         - white:0
@@ -63,9 +63,9 @@ Similar logic can be applied for other codes as well.
 ### Giving Input (Ayushi)
 - Click the images of all the faces following the pattern specified:
      Keep the face with red centre towards you, face with white centre at bottom , face with green centre at your right and so on
-- how to name the images
-- how to run the python file
-- explain the output which we get after running the above command
+- Name all  the images in the format- 1.jpeg,2.jpeg and so on .
+- Run the `CubeInput.py` file using the command "python3 CubeInput.py" from the terminal
+- This python file will return the states of all the faces as shown in  [Sample_Input_For_CFOP.txt](https://github.com/KKVANONYMOUS/Rubiks-Cube/blob/master/demo/Sample_Input_For_CFOP.txt).Copy paste the content of this file and give this as an input to `CFOF.cpp` file.
 ### Solving the cube
 - how to give array input obtained after running CubeInput.py file
 - How to run the file gcc command
