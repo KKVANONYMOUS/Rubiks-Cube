@@ -9,7 +9,17 @@ Sounds <i>interesting</i>,right?
 <br><br>
 Let's dig deep into the various aspects involved in solving the cube
 ## Theory
-- explain about how we take input- explain opencv code (Ayushi)
+- ### 
+   - When we pass the images of all the faces to `CubeInput.py`, it reads all the images one by one , stores the image data in the form of numpy array. To crop the unnecessary part of image, we have used `selectROI()` function. 
+   - The croped image is then resized and pass to `face_color()` function where the different color blocked are masked out using their hsv values and `inRange()` function of opencv. This function returns a black-white image of each block where the particular color is white and rest is all black.
+   - This image is passed to `mask()` function where we have find contours and then iterated over each contour and rejected small contours on the basis of area.We have initiliased a 2-d zero array in which we store the color states of each face.
+   - The blocks are given color according to following manner:
+        - red:1
+        - white:0
+        - green:2
+        - blue:3
+        - orange:4
+        - yellow:5
 - ### Structures to Store the cube state
    - **arr** is a 2D vector which consists of all 6 colours and its index represents its neighbours. i.e- in arr[i][j] i denotes the colour code and j (0->color         code , 1->color code of upper block , 2-> left block , 3-> right block,4->bottom block , 5->yellow block) represent the color code of its neighbors.
 
