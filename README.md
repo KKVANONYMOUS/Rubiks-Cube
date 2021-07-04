@@ -51,7 +51,8 @@ For example, `color code 5` means that the `yellow face` needs to be rotated onl
 <br>
 Similar logic can be applied for other codes as well.
 ### Giving Input (Ayushi)
-- How to click images - should include reference i.e, white down blue right/left---to be confirmed
+- Click the images of all the faces following the pattern specified:
+     Keep the face with red centre towards you, face with white centre at bottom , face with green centre at your right and so on
 - how to name the images
 - how to run the python file
 - explain the output which we get after running the above command
