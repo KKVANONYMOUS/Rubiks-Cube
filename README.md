@@ -31,7 +31,7 @@ Let's dig deep into the various aspects involved in solving the cube
    - The blocks are given color according to the manner specified in [Notations](#notations) section.
  
 ### Structures used to store the cube state
-   - **arr** is a 2D vector which consists of all 6 colours and its index represents its neighbours. i.e. in arr[i][j], i denotes the colour code and j (0->color code , 1->color code of upper block , 2-> left block , 3-> right block,4->bottom block , 5->yellow block) represent the color code of its neighbors.
+   - **arr** is a 2D vector which consists of all 6 colours and its index represents its neighbours. i.e. in arr[i][j], i denotes the colour code and j represent the color code of its neighbors.
 
    - **matrixes[6][9]** is a vector of struct **faceMatrix** consisting of two vectors v1 and v2 where v1 stores its current position of that block and v2 stores its        current position according to the centre, (for example: matrixes[1][1] looks for current position of 2 sided red-yellow block and v2 represent in which center red color is faced).
 
