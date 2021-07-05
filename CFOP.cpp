@@ -460,7 +460,6 @@ void place(int p,vector <int> &ans,int &t1){
     vector<int> vw2 =matrixes[p][3].v2;
     vector<int> v= {0,0,0};
         if(vw1==sum(arr1[arr[p][0]],arr1[arr[p][3]],v)){
-        // cout<<1<<endl;
             if(vw2==arr1[arr[p][0]]){
                 rotate(arr[p][0]);
 
@@ -475,7 +474,6 @@ void place(int p,vector <int> &ans,int &t1){
             }
         }
         else if(vw1==sum(arr1[arr[p][0]],arr1[arr[p][2]],v)){
-        // cout<<2<<endl;
             if(vw2==arr1[arr[p][0]]){
                 rotate(arr[p][0]+6);
 
@@ -490,7 +488,6 @@ void place(int p,vector <int> &ans,int &t1){
             }
         }
         else if(vw1==sum(arr1[arr[p][0]],arr1[arr[p][1]],v)){
-        // cout<<3<<endl;
             if(vw2==arr1[arr[p][0]]){
                 rotate(arr[p][0]);rotate(arr[p][0]);
 
@@ -503,19 +500,17 @@ void place(int p,vector <int> &ans,int &t1){
             }
         }
         else if(vw1==sum(arr1[arr[p][0]],arr1[arr[p][4]],v)){
-            //cout<<4<<endl;
-                if(vw2==arr1[arr[p][4]]){
-                    rotate(arr[p][0]+6);
-                    rotate(arr[p][3]);rotate(5); rotate(arr[p][3]+6);
-                    rotate(arr[p][0]);rotate(arr[p][0]);
+            if(vw2==arr1[arr[p][4]]){
+                rotate(arr[p][0]+6);
+                rotate(arr[p][3]);rotate(5); rotate(arr[p][3]+6);
+                rotate(arr[p][0]);rotate(arr[p][0]);
 
-                    ans[t1++]=arr[p][0]+6;
-                    ans[t1++]=arr[p][3];ans[t1++]=5; ans[t1++]=arr[p][3]+6;
-                    ans[t1++]=arr[p][0];ans[t1++]=arr[p][0];
-                }
+                ans[t1++]=arr[p][0]+6;
+                ans[t1++]=arr[p][3];ans[t1++]=5; ans[t1++]=arr[p][3]+6;
+                ans[t1++]=arr[p][0];ans[t1++]=arr[p][0];
+            }
         }
         else if(vw1==sum(arr1[arr[p][4]],arr1[arr[p][3]],v)){
-        // cout<<5<<endl;
             if(vw2==arr1[arr[p][4]]){
                 rotate(arr[p][3]);
                 rotate(arr[p][0]);
@@ -532,7 +527,6 @@ void place(int p,vector <int> &ans,int &t1){
             }  
         }
     else if(vw1==sum(arr1[arr[p][4]],arr1[arr[p][2]],v)){
-        //cout<<6<<endl;
             if(vw2==arr1[arr[p][4]]){
                 rotate(arr[p][2]+6);
                 rotate(arr[p][0]+6);
@@ -549,7 +543,6 @@ void place(int p,vector <int> &ans,int &t1){
             }    
         }
     else if(vw1==sum(arr1[arr[p][1]],arr1[arr[p][3]],v)){
-        //cout<<7<<endl;
             if(vw2==arr1[arr[p][1]]){
                 rotate(arr[p][3]+6);
                 rotate(arr[p][0]); rotate(arr[p][3]);
@@ -566,7 +559,6 @@ void place(int p,vector <int> &ans,int &t1){
             }        
         }
     else if(vw1==sum(arr1[arr[p][1]],arr1[arr[p][2]],v)){
-        //cout<<8<<endl;
             if(vw2==arr1[arr[p][1]]){
                 rotate(arr[p][2]);
                 rotate(arr[p][0]+6); rotate(arr[p][2]+6);
@@ -583,7 +575,6 @@ void place(int p,vector <int> &ans,int &t1){
             }          
         }
         else if(vw1==sum(arr1[arr[p][4]],arr1[arr[p][5]],v)){
-        // cout<<9<<endl;
             if(vw2==arr1[arr[p][5]]){
                 rotate(0); rotate(0); rotate(arr[p][0]);
                 rotate(6); rotate(6); rotate(arr[p][0]+6);
@@ -600,7 +591,6 @@ void place(int p,vector <int> &ans,int &t1){
             }     
         }
         else if(vw1==sum(arr1[arr[p][3]],arr1[arr[p][5]],v)){
-        // cout<<10<<endl;
             if(vw2==arr1[arr[p][5]]){
                 rotate(arr[p][3]); rotate(arr[p][3]);
                 rotate(arr[p][0]);rotate(arr[p][3]+6); rotate(arr[p][3]+6);
@@ -617,7 +607,6 @@ void place(int p,vector <int> &ans,int &t1){
             }     
         }
         else if(vw1==sum(arr1[arr[p][2]],arr1[arr[p][5]],v)){
-        // cout<<11<<endl;
             if(vw2==arr1[arr[p][5]]){
                 rotate(arr[p][2]+6); rotate(arr[p][2]+6);
                 rotate(arr[p][0]+6);rotate(arr[p][2]); rotate(arr[p][2]);
@@ -634,7 +623,6 @@ void place(int p,vector <int> &ans,int &t1){
             }     
         }
         else if(vw1==sum(arr1[arr[p][1]],arr1[arr[p][5]],v)){
-        // cout<<12<<endl;
             if(vw2==arr1[arr[p][5]]){
                 rotate(5); rotate(5);
                 rotate(arr[p][0]);rotate(arr[p][0]); 
@@ -705,19 +693,14 @@ void makeWhiteCross(){
 //UTILITY FUNCTION FOR IMPLEMENTING F2L ALGORITHM
 void dostep2(int p,vector<int> &vc1 , vector<int> &vc2 , vector<int> &ve1 ,vector<int> &ve2 ,vector<int> &v,vector<int> &vw2,vector<int> &ans , int &t1){
 if(vc1[2]==1 && ve1[2]==1){
-    //cout<<1<<endl;
         if(vc2==arr1[arr[p][1]] && vw2==arr1[arr[p][0]] ){
             if(ve2==arr1[arr[p][1]]){
                 if(ve1== sum(arr1[arr[p][3]],arr1[arr[p][1]],v)){
-                    //correct
-                    //cout<<"c"<<endl;
                     rotate(arr[p][1]);rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);
 
                     ans[t1++]=arr[p][1];ans[t1++]=arr[p][3];ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][3]+6;
                 }
                 else if(ve1== sum(arr1[arr[p][0]],arr1[arr[p][1]],v)){
-                    //4th 2ndcase
-                    //cout<<"d"<<endl;
                     rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][0]);rotate(arr[p][1]+6);
                     rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][3]+6);
 
@@ -725,8 +708,6 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][3];ans[t1++]=arr[p][1];ans[t1++]=arr[p][3]+6;
                 }
                 else if(ve1==sum(arr1[arr[p][2]],arr1[arr[p][1]],v)){
-                    //correcth
-                    //cout<<"e"<<endl;
                     rotate(arr[p][1]+6);rotate(arr[p][3]);
                     rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]+6);
                     rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);
@@ -736,8 +717,6 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][1];ans[t1++]=arr[p][1];ans[t1++]=arr[p][3];ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][3]+6;
                 }
                 else if(ve1== sum(arr1[arr[p][5]],arr1[arr[p][1]],v)){
-                    //correctd
-                    //cout<<"f"<<endl;
                     rotate(arr[p][1]+6);rotate(arr[p][3]);
                     rotate(arr[p][1]);rotate(arr[p][3]+6);
                     rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]);rotate(arr[p][1]+6);
@@ -751,15 +730,11 @@ if(vc1[2]==1 && ve1[2]==1){
                
             }
             else if(ve2==arr1[arr[p][2]]){
-                //correct
-                //cout<<"g"<<endl;
                 rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
 
                 ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0];
             }
             else if(ve2==arr1[arr[p][0]]){
-                //correcte
-                //cout<<"h"<<endl;
                 rotate(arr[p][1]);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][0]);rotate(arr[p][1]+6);
                 rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
 
@@ -767,8 +742,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0];
             }
             else if(ve2==arr1[arr[p][5]]){
-                //correctb
-                //cout<<"i"<<endl;
                 rotate(arr[p][1]);rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);rotate(arr[p][1]+6);
                 rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
 
@@ -776,8 +749,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0];
             }
             else if(ve2==arr1[arr[p][3]]){
-                //correcf
-                //cout<<"j"<<endl;
                 rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][1]);
                 rotate(arr[p][3]+6); rotate(arr[p][1]);
                 rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
@@ -792,8 +763,6 @@ if(vc1[2]==1 && ve1[2]==1){
             if(ve2==arr1[arr[p][1]]){
                 
               if(ve1== sum(arr1[arr[p][3]],arr1[arr[p][1]],v)){
-                  //correctg
-                    //cout<<"k"<<endl;
                     rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);rotate(arr[p][1]);
                     rotate(arr[p][3]); rotate(arr[p][1]); rotate(arr[p][3]+6);
 
@@ -801,8 +770,6 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][3]; ans[t1++]=arr[p][1]; ans[t1++]=arr[p][3]+6;
                 }
                 else if(ve1== sum(arr1[arr[p][0]],arr1[arr[p][1]],v)){
-                   //correctj
-                    //cout<<"l"<<endl;
                     rotate(arr[p][3]+6);rotate(arr[p][1]+6);rotate(arr[p][1]+6);rotate(arr[p][3]);
                     rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][3]+6);
                     rotate(arr[p][3]+6);rotate(arr[p][1]);rotate(arr[p][3]);
@@ -812,8 +779,6 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][3]+6;ans[t1++]=arr[p][1];ans[t1++]=arr[p][3];
                 }
                 else if(ve1==sum(arr1[arr[p][2]],arr1[arr[p][1]],v)){
-                    //correctk
-                    //cout<<"m"<<endl;
                     rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][1]);
                     rotate(arr[p][3]+6);rotate(arr[p][1]);
                     rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][3]+6);
@@ -823,8 +788,6 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][3];ans[t1++]=arr[p][1];ans[t1++]=arr[p][3]+6;
                 }
                 else if(ve1==sum(arr1[arr[p][5]],arr1[arr[p][1]],v)){
-                    //correct
-                    //cout<<"n"<<endl;
                     rotate(arr[p][3]);rotate(arr[p][1]);
                     rotate(arr[p][3]+6);
 
@@ -833,8 +796,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 }
             }
             else if(ve2==arr1[arr[p][0]]){
-                //correct
-               // cout<<"o"<<endl;
                 rotate(arr[p][1]+6);rotate(arr[p][0]+6);rotate(arr[p][1]);
                 rotate(arr[p][0]);
 
@@ -842,8 +803,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][0];
             }  
              else if(ve2==arr1[arr[p][3]]){
-                 //4th first
-                //cout<<"p"<<endl;
                 rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);rotate(arr[p][1]);
                 rotate(arr[p][1]);rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
 
@@ -851,8 +810,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][1];ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0];
             } 
             else if(ve2==arr1[arr[p][5]]){
-                //correcti
-                //cout<<"q"<<endl;
                 rotate(arr[p][1]);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][0]);
                 rotate(arr[p][1]+6);rotate(arr[p][1]+6);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][0]);
 
@@ -860,8 +817,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1];ans[t1++]=arr[p][0];
             } 
             else if(ve2==arr1[arr[p][2]]){
-                //correcta
-                //cout<<"r"<<endl;
                 rotate(arr[p][1]);rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
                 rotate(arr[p][1]+6);rotate(arr[p][1]+6);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][0]);
 
@@ -869,13 +824,9 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1];ans[t1++]=arr[p][0];
             } 
         }
-        //whiteee uppeerr
    else if(vc2==arr1[arr[p][3]] && vw2==arr1[arr[p][1]]){
             if(ve2==arr1[arr[p][1]]){
-                //cout<<"s"<<endl;
                 if(ve1== sum(arr1[arr[p][3]],arr1[arr[p][1]],v)){
-                    //corrects
-                    //cout<<"s1"<<endl;
                     rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]+6);
                     rotate(arr[p][1]+6);rotate(arr[p][3]);
                     rotate(arr[p][1]);rotate(arr[p][3]+6);
@@ -885,9 +836,7 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][1];ans[t1++]=arr[p][3]+6;
                 }
                 else if(ve1== sum(arr1[arr[p][0]],arr1[arr[p][1]],v)){
-                    //cout<<"s2"<<endl;
                     rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][1]+6);rotate(arr[p][3]+6);rotate(arr[p][1]+6);
-                    //correct k part
                     rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][1]);
                     rotate(arr[p][3]+6);rotate(arr[p][1]);
                     rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][3]+6);
@@ -898,7 +847,6 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][3];ans[t1++]=arr[p][1];ans[t1++]=arr[p][3]+6;
                 }
                 else if(ve1== sum(arr1[arr[p][2]],arr1[arr[p][1]],v)){
-                    //cout<<"s3"<<endl;
                     rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]);
                     rotate(arr[p][1]);rotate(arr[p][3]+6);rotate(arr[p][1]);
                     rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);
@@ -909,8 +857,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 
                 }
                 else if(ve1== sum(arr1[arr[p][5]],arr1[arr[p][1]],v)){
-                    //correctc
-                    //cout<<"s4"<<endl;
                     rotate(arr[p][1]);rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]+6);
                     rotate(arr[p][1]);rotate(arr[p][3]);
                     rotate(arr[p][1]+6);rotate(arr[p][3]+6);
@@ -920,10 +866,7 @@ if(vc1[2]==1 && ve1[2]==1){
                     ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][3]+6;
                 }
             }
-            // y=?
             else if(ve2==arr1[arr[p][3]]){
-                //cout<<"t"<<endl;
-                //5th second
                 rotate(arr[p][0]);rotate(arr[p][1]);rotate(arr[p][3]);rotate(arr[p][1]+6);
                 rotate(arr[p][3]+6);
                 rotate(arr[p][0]+6);rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);
@@ -933,19 +876,14 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][3];ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][3]+6;
                 
             }
-            else if(ve2==arr1[arr[p][5]]){
-                //cout<<"u"<<endl;
-                
+            else if(ve2==arr1[arr[p][5]]){                
                 rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
                 rotate(arr[p][1]+6);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][0]);
-                // rotate(arr[p][1]+6);rotate(arr[p][1]+6);
-                // rotate(arr[p][1]+6);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][0]);
 
                 ans[t1++]=arr[p][1];ans[t1++]=arr[p][1];ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0];
                 ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1];ans[t1++]=arr[p][0];
             }
             else if(ve2==arr1[arr[p][2]]){
-                //cout<<"v"<<endl;
                 rotate(arr[p][1]+6);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][0]);
                 rotate(arr[p][1]+6);rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][0]);
                 
@@ -953,7 +891,6 @@ if(vc1[2]==1 && ve1[2]==1){
                 ans[t1++]=arr[p][1]+6;ans[t1++]=arr[p][0]+6;ans[t1++]=arr[p][1];ans[t1++]=arr[p][0];
             }
             else if(ve2==arr1[arr[p][0]]){
-                //cout<<"w"<<endl;
                 rotate(arr[p][0]+6);rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][0]);
                 rotate(arr[p][1]);rotate(arr[p][0]+6);rotate(arr[p][1]+6);rotate(arr[p][0]);
                 
@@ -974,10 +911,8 @@ void place2(int p,vector<int> &ans , int &t1){
     vector <int> ve1 = matrixes[p][2].v1;
     vector <int> ve2 = matrixes[p][2].v2;
     vector<int> v={0,0,0};
-    //cout<<"enter"<<endl;
  
     if(ve1[2]!=1){
-        //cout<<8<<endl;
         if(ve1==sum(arr1[arr[p][2]],arr1[arr[p][0]],v)){
             rotate(arr[p][2]+6);
             rotate(5);
@@ -1016,7 +951,6 @@ void place2(int p,vector<int> &ans , int &t1){
     if(ve1[2]!=1) cout<<"wrong"<<endl;
 
     if(vc1[2]==-1){
-        // cout<<9<<endl;
         if(vc1==sum(arr1[arr[p][3]],arr1[arr[p][5]],arr1[arr[p][4]])){
             if(ve1==sum(arr1[arr[p][2]],arr1[arr[p][1]],v)) {
             rotate(arr[p][5]);
@@ -1094,17 +1028,14 @@ void place2(int p,vector<int> &ans , int &t1){
     }
 
     if(vc1==sum(arr1[arr[p][3]],arr1[arr[p][5]],arr1[arr[p][1]])){
-        //cout<<"true"<<endl;
         rotate(5);
         ans[t1++]=5;
     }
     if(vc1==sum(arr1[arr[p][2]],arr1[arr[p][0]],arr1[arr[p][1]])){
-        //cout<<"t"<<endl;
         rotate(11);
         ans[t1++]=11;
     }
     if(vc1==sum(arr1[arr[p][2]],arr1[arr[p][5]],arr1[arr[p][1]])){
-        //cout<<"L"<<endl;
         rotate(5);
         rotate(5);
         ans[t1++]=5; ans[t1++]=5;
@@ -1192,7 +1123,6 @@ void oll(){
     if(m==1){
         int p;
         bool n;
-        //cout<<"m1"<<endl;
         if(arrr[0]==5 && orange[0][2]==5) {p=1; n =true;}
         else if(arrr[0]==6 && orange[0][2]==5) {p=3; n=true;}
         else if(arrr[0]==7 && orange[0][2]==5) {p=4; n = true;}
@@ -1203,18 +1133,15 @@ void oll(){
         else if(arrr[0]==8 && blue[0][0]==5) {p=1; n =false;}
         
         if(n==true){
-            //cout<<1<<endl;
             rotate(arr[p][2]);rotate(arr[p][1]);rotate(arr[p][2]+6);rotate(arr[p][1]);rotate(arr[p][2]);
             rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][2]+6);
 
             cout<<arr[p][2]<<" "<<arr[p][1]<<" "<<arr[p][2]+6<<" "<<arr[p][1]<<" "<<arr[p][2]
             <<" "<<arr[p][1]<<" "<<arr[p][1]<<" "<<arr[p][2]+6;
-            //y2
             totalSteps+=8;
         }
         
         if(n==false){
-            //cout<<2<<endl;
             rotate(arr[p][3]+6);rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);
             rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]);
 
@@ -1226,7 +1153,6 @@ void oll(){
     }
     
     else if(m==0){
-        //cout<<"m0"<<endl;
         int p;
         bool n;
         if(orange[0][0]==5 && orange[0][2]==5 && red[0][0]==5 && red[0][2]==5 ){
@@ -1249,7 +1175,6 @@ void oll(){
         }
 
         if(n==true){
-            //cout<<3<<endl;
             rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]+6);rotate(arr[p][1]+6);
             rotate(arr[p][3]);rotate(arr[p][1]);rotate(arr[p][3]+6);rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][3]+6);
 
@@ -1258,7 +1183,6 @@ void oll(){
             totalSteps+=12;
         }
         if(n==false){
-            //case 22
             rotate(arr[p][3]);rotate(arr[p][1]+6);rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][3]);
             rotate(arr[p][1]+6);rotate(arr[p][3]);rotate(arr[p][3]);rotate(arr[p][1]+6);
             rotate(arr[p][3]);rotate(arr[p][3]);rotate(arr[p][1]+6); rotate(arr[p][1]+6); rotate(arr[p][3]);
@@ -1271,7 +1195,6 @@ void oll(){
     }
 
     else if(m==2){
-        //cout<<"m2"<<endl;
         int n; int p;
         if(blue[0][0]==5 && blue[0][2]==5 ){
             p=3; n=1;
@@ -1284,7 +1207,6 @@ void oll(){
         }
         else if(orange[0][0]==5 && orange[0][2]==5 ){
             p=4; n=1;
-            //cout<<"true"<<endl;
         }
         else if(red[0][0]==5 && green[0][2]==5 ){
             p=1; n=2;
@@ -1306,16 +1228,12 @@ void oll(){
         }
         else if(red[0][0]==5 && orange[0][2]==5 ){
             p=4; n=3;
-            //cout<<false;
         }
         else if(green[0][0]==5 && blue[0][2]==5 ){
             p=3; n=3;
         }
-        //cout<<"entering"<<endl;
         
         if(n==1){
-            //case 23
-            //cout<<5<<endl;
             rotate(arr[p][3]);rotate(arr[p][3]);rotate(arr[p][4]);rotate(arr[p][3]+6);rotate(arr[p][1]);
             rotate(arr[p][1]);rotate(arr[p][3]);rotate(arr[p][4]+6);rotate(arr[p][3]+6);
             rotate(arr[p][1]);rotate(arr[p][1]);rotate(arr[p][3]+6);
@@ -1326,8 +1244,6 @@ void oll(){
             totalSteps+=12;
         }
         if(n==2){ 
-            // case 25
-            //cout<<6<<endl;
             rotate(arr[p][3]+6);rotate(arr[p][0]);rotate(arr[p][3]);rotate(arr[p][5]+6);rotate(arr[p][3]+6);
             rotate(arr[p][0]+6);rotate(arr[p][3]);rotate(arr[p][5]);
 
@@ -1336,8 +1252,6 @@ void oll(){
             totalSteps+=8;    
             }
         if(n==3){
-            //cout<<7<<endl;
-            // case 24
             rotate(arr[p][3]);rotate(arr[p][5]);rotate(arr[p][2]+6);rotate(arr[p][5]+6);rotate(arr[p][3]+6);
             rotate(arr[p][5]);rotate(arr[p][2]);rotate(arr[p][5]+6);
 
